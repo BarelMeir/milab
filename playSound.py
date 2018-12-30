@@ -24,5 +24,5 @@ pygame.mixer.music.play()
 print("volume: ", pygame.mixer.music.get_volume())
 
 
-while pygame.mixer.music.get_busy() == True:
+while True:
 	continue
