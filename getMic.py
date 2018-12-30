@@ -18,4 +18,4 @@ mcp = Adafruit_MCP3008.MCP3008(clk = CLK, cs = CS, miso = MISO, mosi = MOSI)
 
 while True:
 	print(mcp.read_adc(0))
-	sleep(2)
+	sleep(0.1)
