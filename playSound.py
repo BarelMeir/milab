@@ -23,8 +23,8 @@ pygame.mixer.music.play()
 
 print("volume: ", pygame.mixer.music.get_volume())
 sleep(1)
-vol = 0.1
+vol = 1
 pygame.mixer.music.set_volume(vol)
-print("volume: ", pygame.mixer.music.get_volume())
-while True:
+
+while pygame.mixer.music.get_busy() == True:
 	continue
