@@ -4,7 +4,6 @@ from time import sleep
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 import Adafruit_DHT
-from mpu6050 import mpu6050
 
 #Set up script to use the right pin configuration
 GPIO.setmode(GPIO.BCM)
@@ -22,15 +21,10 @@ pygame.mixer.init()
 pygame.mixer.music.load("best_friend.mp3")
 pygame.mixer.music.play()
 
+print("volume: ", pygame.mixer.music.get_volume())
+sleep(1)
+vol = 0.1
+pygame.mixer.music.set_volume(vol)
+print("volume: ", pygame.mixer.music.get_volume())
 while True:
-	print(mcp.read_adc(0))
-	sleep(2)
-
-# print("volume: ", pygame.mixer.music.get_volume())
-# sleep(1)
-# vol = 0.1
-# pygame.mixer.music.set_volume(vol)
-# print("volume: ", pygame.mixer.music.get_volume())
-# while pygame.mixer.music.get_busy() == True:
-# 	print(mcp.read_adc(0))
-# 	continue
+	continue
