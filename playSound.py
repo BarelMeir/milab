@@ -18,7 +18,7 @@ mcp = Adafruit_MCP3008.MCP3008(clk = CLK, cs = CS, miso = MISO, mosi = MOSI)
 
 #music load
 pygame.mixer.init()
-pygame.mixer.music.load("maron5.mp3")
+pygame.mixer.music.load("best_friend.mp3")
 pygame.mixer.music.play()
 
 print("volume: ", pygame.mixer.music.get_volume())
