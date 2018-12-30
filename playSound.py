@@ -22,9 +22,7 @@ pygame.mixer.music.load("maron5.mp3")
 pygame.mixer.music.play()
 
 print("volume: ", pygame.mixer.music.get_volume())
-sleep(1)
-vol = 1
-pygame.mixer.music.set_volume(vol)
 
-while True:
+
+while pygame.mixer.music.get_busy() == True:
 	continue
