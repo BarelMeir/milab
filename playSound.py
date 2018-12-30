@@ -16,13 +16,31 @@ MOSI = 24
 CS = 25
 mcp = Adafruit_MCP3008.MCP3008(clk = CLK, cs = CS, miso = MISO, mosi = MOSI)
 
-#music load
-pygame.mixer.init()
-pygame.mixer.music.load("best_friend.mp3")
-pygame.mixer.music.play()
+
 
 print("volume: ", pygame.mixer.music.get_volume())
 
+sensorLastValue = mcp.read_adc(0)
 
+def updateSensorValue():
+	global sensorLastValue
+	sensorLastValue = mcp.read_adc(0)
+
+def updateVolume(volume):
+	pygame.mixer.music.set_volume(volume)
+
+#music load
+pygame.mixer.init()
+pygame.mixer.music.load("best_friend.mp3")
+#play music
+pygame.mixer.music.play()
+updateVolume(1)
 while True:
-	continue
+	treshold = 150
+	potentiometerValue = mcp.read_adc(0)
+	if(potentiometerValue - sensorLastValue > treshold):
+		print("potentiometer changed")
+		print("last: ",sensorLastValue)
+		print("current: ", potentiometerValue)
+		updateSensorValue()
+		updateVolume(0.2)
