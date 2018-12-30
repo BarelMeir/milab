@@ -16,10 +16,6 @@ MOSI = 24
 CS = 25
 mcp = Adafruit_MCP3008.MCP3008(clk = CLK, cs = CS, miso = MISO, mosi = MOSI)
 
-
-
-print("volume: ", pygame.mixer.music.get_volume())
-
 sensorLastValue = mcp.read_adc(0)
 
 def updateSensorValue():
