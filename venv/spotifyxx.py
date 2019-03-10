@@ -7,11 +7,26 @@ import spotipy.util as util
 from json.decoder import JSONDecodeError
 
 # Get the username -> qaqknn1mf4oa5ysh7c55rk8wt (Mia Shpan)
-username ='qaqknn1mf4oa5ysh7c55rk8wt'
+'''
+coopers cardentials
+client id: '7aa624328ab34962bc800beb9c5e495e'
+client secret: 'cbd7ae1af0994259916b7dd415c9149b'
+redirect: 'http://google.com/'
+
+MIAS USERNAME: 'qaqknn1mf4oa5ysh7c55rk8wt'
+BARELS USERNAME: 'adwt3hr9ynmjt5cs3ahdcjg63'
+COOPER USERNAME: 'uwpq67zkbgeg7qxx2ya0y7mm9'
+'''
+
+miaUserName = 'qaqknn1mf4oa5ysh7c55rk8wt'
+barelUserName = 'adwt3hr9ynmjt5cs3ahdcjg63'
+cooperUserName = 'uwpq67zkbgeg7qxx2ya0y7mm9'
+
+username = miaUserName
 scope = 'user-read-recently-played playlist-modify-public'
-clientID = 'f5432fa1ce6543bfa958cd0f83be368d'
-clientSecret = 'e019939ff06f4b3d9a57d68e95ada29a'
-redirectURI = 'https://google.com/'
+clientID = '7aa624328ab34962bc800beb9c5e495e'
+clientSecret = 'cbd7ae1af0994259916b7dd415c9149b'
+redirectURI = 'http://google.com/'
 
 # Erase cache and prompt for user permission
 try:
